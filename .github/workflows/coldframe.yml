@@ -1,0 +1,35 @@
+# Render this Remotion project in the cloud with coldframe.
+# Start it from the Actions tab ("Run workflow") or with: coldframe render <CompositionId>
+# The MP4 is attached to the run; `coldframe render` downloads it to out/cloud/.
+
+name: coldframe
+
+on:
+  workflow_dispatch:
+    inputs:
+      composition:
+        description: Composition id
+        required: true
+      chunks:
+        description: Parallel machines (1-20)
+        default: "20"
+      props:
+        description: Input props (JSON)
+        default: "{}"
+      output-name:
+        description: Output file name (optional)
+        default: ""
+
+jobs:
+  render:
+    uses: Razee4315/coldframe/.github/workflows/render.yml@v1
+    with:
+      composition: ${{ inputs.composition }}
+      chunks: ${{ fromJSON(inputs.chunks) }}
+      props: ${{ inputs.props }}
+      output-name: ${{ inputs.output-name }}
+      gl: swangle
+      concurrency: "50%"
+      frame-timeout: 240000
+      chunk-timeout: 120
+      extra-args: "--crf=16"

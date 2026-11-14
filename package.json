@@ -9,10 +9,21 @@
   },
   "private": true,
   "dependencies": {
+    "@react-three/csg": "^4.0.0",
+    "@react-three/drei": "^10.7.9",
+    "@react-three/fiber": "^9.8.2",
+    "@react-three/postprocessing": "^3.2.2",
     "@remotion/cli": "4.0.536",
+    "@remotion/google-fonts": "4.0.536",
+    "@remotion/media": "4.0.536",
+    "@remotion/three": "4.0.536",
+    "@types/three": "0.182.0",
+    "postprocessing": "^6.39.6",
     "react": "19.2.3",
     "react-dom": "19.2.3",
-    "remotion": "4.0.536"
+    "remotion": "4.0.536",
+    "three": "0.182.0",
+    "zod": "4.5.4"
   },
   "devDependencies": {
     "@remotion/eslint-config-flat": "4.0.536",

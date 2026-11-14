@@ -5,3 +5,18 @@ dist
 
 # Ignore the output video from Git but not videos you import into src/.
 out
+.remotion-tmp/
+
+# Local AI skills, Windows directory junctions, and private visual reference material
+.agent/
+.agents/
+.claude/
+claude-animated-shorts-main/
+Reference/
+
+# Large regenerable audio caches / uncompressed WAV stems (final mix lives in public/mustang_mix.mp3)
+shorts/*/audio/_cache/
+shorts/**/__pycache__/
+shorts/**/*.wav
+shorts/**/*.mp3
+
