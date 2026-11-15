@@ -4,10 +4,19 @@ import { DURATION_IN_FRAMES, FPS } from "./cues";
 import { MainVideo } from "./MainVideo";
 import { compositionSchema } from "./schema";
 import { MustangShort, MUSTANG_FRAMES } from "./videos/mustang/Mustang";
+import { B29Short, B29_FRAMES } from "./videos/b29/B29";
 
 export const RemotionRoot: React.FC = () => {
   return (
     <>
+      <Composition
+        id="B29Short"
+        component={B29Short}
+        durationInFrames={B29_FRAMES}
+        fps={30}
+        width={1080}
+        height={1920}
+      />
       <Composition
         id="MustangShort"
         component={MustangShort}
